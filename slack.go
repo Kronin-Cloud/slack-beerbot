@@ -60,7 +60,7 @@ func (s *SlackListener) handleMessageEvent(ev *slack.MessageEvent) error {
 	}
 
 	// value is passed to message handler when request is approved.
-	attachment := slack.Attachment{
+	/*attachment := slack.Attachment{
 		Text:       "Which beer do you want? :beer:",
 		Color:      "#f9a41b",
 		CallbackID: "beer",
@@ -99,15 +99,15 @@ func (s *SlackListener) handleMessageEvent(ev *slack.MessageEvent) error {
 				Style: "danger",
 			},
 		},
-	}
+	}*/
 
-	params := slack.PostMessageParameters{
+	/*params := slack.PostMessageParameters{
 		Attachments: []slack.Attachment{
 			attachment,
 		},
-	}
+	}*/
 
-	if _, _, err := s.client.PostMessage(ev.Channel, "", params); err != nil {
+	if _, _, err := s.client.PostMessage(ev.Channel, slack.MsgOptionText("",false),slack.MsgOptionAttachments()); err != nil {
 		return fmt.Errorf("failed to post message: %s", err)
 	}
 
