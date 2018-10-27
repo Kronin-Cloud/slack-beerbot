@@ -1,0 +1,14 @@
+hash: 38c6b1bf4ea23265bbd03711ff6864d5a44ce5b65c9ca0eb05b45c86a9da1eb2
+updated: 2018-10-27T18:43:39.797513+02:00
+imports:
+- name: github.com/gorilla/websocket
+  version: 76e4896901ef89d253d69b528d3701dd146fe2ae
+- name: github.com/kelseyhightower/envconfig
+  version: dd1402a4d99de9ac2f396cd6fcb957bc2c695ec1
+- name: github.com/nlopes/slack
+  version: cd5e66cd06325a936961b077e1947f1eb2a61561
+  subpackages:
+  - slackutilsx
+- name: github.com/pkg/errors
+  version: 059132a15dd08d6704c67711dae0cf35ab991756
+testImports: []

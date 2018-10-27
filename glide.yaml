@@ -1,0 +1,4 @@
+package: github.com/Kronin-Cloud/slack-beerbot
+import:
+- package: github.com/kelseyhightower/envconfig
+- package: github.com/nlopes/slack
