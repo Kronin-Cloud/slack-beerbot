@@ -17,7 +17,7 @@ after_success:
   - mkdir -p dist
   - CGO_ENABLED="0" GOARCH="amd64" GOOS="linux" go build -a -installsuffix cgo -o ./dist/gomotics
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - export REPO=$DOCKER_USER/kronincloud
+  - export REPO=kronincloud/slack-beerbot
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_TAG ; fi`
   - echo $REPO:$TAG
   - docker build -f Dockerfile -t $REPO:$TAG .
